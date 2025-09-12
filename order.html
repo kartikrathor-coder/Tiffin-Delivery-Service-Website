@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Order Now | My Online Dabba</title>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo-section">
+            <a href="main.html" title="Home">
+                <img src="Graphics/logo.png" alt="My Dabba Online logo" id="logo-img">
+            </a>
+            <div class="brand-text">
+                <h1 id="brand-name">My Online Dabba</h2>
+                <p id="tagline">Home Cooked & Fresh</p>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="main.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="menu.html"><i class="fas fa-utensils"></i> Menu</a></li>
+            <li><a href="order.html" class="active"><i class="fas fa-shopping-bag"></i> Order Now</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i>About</a></li>
+            <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+        </ul>
+        <button class="order-btn" onclick="window.location.href='order.html'">Order Now</button>
+    </nav>
+    <section id="order-page">
+        <h1>Place <span class="highlight">Your Order</span></h1>
+        <p>Select your favorite tiffins for delivery</p>
+        <div class="order-layout">
+            <div class="order-list">
+                <div class="meal-order-filters">
+                    <button class="order-filter active" data-filter="all" value="all">All</button>
+                    <button class="order-filter" data-filter="lunch" value="lunch">Lunch</button>
+                    <button class="order-filter" data-filter="dinner" value="dinner">Dinner</button>
+                </div>
+                <div class="type-order-filter">
+                    <button class="order-filter active" data-filter="all" value="all">All Meals</button>
+                    <button class="order-filter" data-filter="veg" value="veg">Vegetarian</button>
+                    <button class="order-filter" data-filter="nonveg" value="nonveg">Non-Vegetarian</button>
+                    <button class="order-filter" data-filter="vegan" value="vegan">Vegan</button>
+                    <button class="order-filter" data-filter="special" value="special">Special</button>
+                </div>
+                <div class="order-grid">
+                    <div class="order-item" data-type="veg" data-meal="lunch">
+                        <div class="order-img">
+                            <img src="Graphics/Paneer Butter Masala with Butter Naan.jpg" alt="Paneer Butter Masala with Butter Naan">
+                            <span class="badge-veg">Veg</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Paneer Butter Masala with Butter Naan</h3>
+                            <p>Creamy paneer curry paired with soft naan.</p>
+                            <span class="price">₹150</span>
+                            <button class="add-btn" data-name="Paneer Butter Masala with Butter Naan" data-price="150">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="veg" data-meal="lunch">
+                        <div class="order-img">
+                            <img src="Graphics/Vegetable Pulao with Raita.jpg" alt="Vegetable Pulao with Raita">
+                            <span class="badge-veg">Veg</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Vegetable Pulao with Raita</h3>
+                            <p>Fragrant rice with veggies and cool raita.</p>
+                            <span class="price">₹150</span>
+                            <button class="add-btn" data-name="Vegetable Pulao with Raita" data-price="150">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="veg" data-meal="lunch">
+                        <div class="order-img">
+                            <img src="Graphics/Chole Bhature.jpg" alt="Chole Bhature">
+                            <span class="badge-veg">Veg</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Chole Bhature</h3>
+                            <p>Spicy chickpeas served with fluffy bhature.</p>
+                            <span class="price">₹150</span>
+                            <button class="add-btn" data-name="Chole Bhature" data-price="150">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="veg" data-meal="lunch">
+                        <div class="order-img">
+                            <img src="Graphics/Aloo Poori.jpg" alt="Aloo Poori">
+                            <span class="badge-veg">Veg</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Aloo Poori</h3>
+                            <p>Crunchy Poori with tasty delicious Aloo Curry.</p>
+                            <span class="price">₹150</span>
+                            <button class="add-btn" data-name="Aloo Poori" data-price="150">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="nonveg" data-meal="lunch">
+                        <div class="order-img">
+                            <img src="Graphics/Chicken Biryani.jpg" alt="Chicken Biryani">
+                            <span class="badge-nonveg">Non-Veg</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Chicken Biryani</h3>
+                            <p>Aromatic layered rice with spiced chicken.</p>
+                            <span class="price">₹250</span>
+                            <button class="add-btn" data-name="Chicken Biryani" data-price="250">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="nonveg" data-meal="lunch">
+                        <div class="order-img">
+                            <img src="Graphics/Butter Chicken with Garlic Naan.jpg" alt="Butter Chicken with Garlic Naan">
+                            <span class="badge-nonveg">Non-Veg</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Butter Chicken with Garlic Naan</h3>
+                            <p>Tender chicken in creamy gravy with naan.</p>
+                            <span class="price">₹250</span>
+                            <button class="add-btn" data-name="Butter Chicken with Garlic Naan" data-price="250">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="nonveg" data-meal="lunch">
+                        <div class="order-img">
+                            <img src="Graphics/Egg Curry with Rice.jpg" alt="Egg Curry with Rice">
+                            <span class="badge-nonveg">Non-Veg</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Vegetable Pulao with Raita</h3>
+                            <p>Fragrant rice with veggies and cool raita.</p>
+                            <span class="price">₹250</span>
+                            <button class="add-btn" data-name="Egg Curry with Rice" data-price="250">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="nonveg" data-meal="lunch">
+                        <div class="order-img">
+                            <img src="Graphics/Mutton Keema with Chapati.jpg" alt="Mutton Keema with Chapati">
+                            <span class="badge-nonveg">Non-Veg</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Mutton Keema with Chapati</h3>
+                            <p>Minced mutton curry with hot chapatis.</p>
+                            <span class="price">₹250</span>
+                            <button class="add-btn" data-name="Mutton Keema with Chapati" data-price="250">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="vegan" data-meal="lunch">
+                        <div class="order-img">
+                            <img src="Graphics/Vegan Quinoa Salad with Lemon Dressing.jpg" alt="Vegan Quinoa Salad with Lemon Dressing">
+                            <span class="badge-vegan">Vegan</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Vegan Quinoa Salad with Lemon Dressing</h3>
+                            <p>Fresh quinoa tossed with veggies and citrus good for a healthy lunch.</p>
+                            <span class="price">₹200</span>
+                            <button class="add-btn" data-name="Vegan Quinoa Salad with Lemon Dressing" data-price="200">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="vegan" data-meal="lunch">
+                        <div class="order-img">
+                            <img src="Graphics/Tofu & Vegetable Stir Fry with Brown Rice.jpg" alt="Tofu & Vegetable Stir Fry with Brown Rice">
+                            <span class="badge-vegan">Vegan</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Tofu & Vegetable Stir Fry with Brown Rice</h3>
+                            <p>Protein-rich tofu with crunchy veggies.</p>
+                            <span class="price">₹200</span>
+                            <button class="add-btn" data-name="Tofu & Vegetable Stir Fry with Brown Rice" data-price="200">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="vegan" data-meal="lunch">
+                        <div class="order-img">
+                            <img src="Graphics/Chana Masala with Roti.jpg" alt="Chana Masala with Roti">
+                            <span class="badge-vegan">Vegan</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Chana Masala with Roti</h3>
+                            <p>Spiced chickpeas with soft roti. A good match for your vegan lunch.</p>
+                            <span class="price">₹200</span>
+                            <button class="add-btn" data-name="Chana Masala with Roti" data-price="200">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="vegan" data-meal="lunch">
+                        <div class="order-img">
+                            <img src="Graphics/Dal Tadka with Steamed Rice.jpg" alt="Dal Tadka with Steamed Rice">
+                            <span class="badge-vegan">Vegan</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Dal Tadka with Steamed Rice</h3>
+                            <p>Dal tempered with garlic and spices. Full of protein.</p>
+                            <span class="price">₹200</span>
+                            <button class="add-btn" data-name="Dal Tadka with Steamed Rice" data-price="200">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="special" data-meal="lunch">
+                        <div class="order-img">
+                            <img src="Graphics/Thali (Paneer Sabzi + Dal + Rice + Roti + Sweet).jpg" alt="Thali (Paneer Sabzi + Dal + Rice + Roti + Sweet)">
+                            <span class="badge-special">Special</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Veg Thali</h3>
+                            <p>Complete pure veg meal with sabzi, dal, rice, roti, and sweet.</p>
+                            <span class="price">₹300</span>
+                            <button class="add-btn" data-name="Veg Thali" data-price="300">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="special" data-meal="lunch">
+                        <div class="order-img">
+                            <img src="Graphics/Chicken Thali (Chicken Curry + Dal + Rice + Roti + Salad).jpg" alt="Non-Veg Thali (Chicken Curry + Dal + Rice + Roti + Salad)">
+                            <span class="badge-special">Special</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Non-Veg Thali</h3>
+                            <p>Full plate including chicken curry with dal, rice, roti, and salad.</p>
+                            <span class="price">₹300</span>
+                            <button class="add-btn" data-name="Non-Veg Thali" data-price="300">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="special" data-meal="lunch">
+                        <div class="order-img">
+                            <img src="Graphics/Veggie Wrap with Hummus.jpg" alt="Veggie Wrap with Hummus">
+                            <span class="badge-special">Special</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Veggie Wrap</h3>
+                            <p>Soft wrap stuffed with hummus and veggies tasty and delicious.</p>
+                            <span class="price">₹300</span>
+                            <button class="add-btn" data-name="Veggie Wrap" data-price="300">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="special" data-meal="lunch">
+                        <div class="order-img">
+                            <img src="Graphics/Fusion Pasta (Indian spices twist).jpg" alt="Fusion Pasta">
+                            <span class="badge-special">Special</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Fusion Pasta with Indian Spices</h3>
+                            <p>Pasta tossed with desi spices and a little touch of Indian cooking.</p>
+                            <span class="price">₹300</span>
+                            <button class="add-btn" data-name="Fusion Pasta" data-price="300">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="veg" data-meal="dinner">
+                        <div class="order-img">
+                            <img src="Graphics/Palak Paneer with Rice.jpg" alt="Palak Paneer with Rice">
+                            <span class="badge-veg">Veg</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Palak Paneer with Rice</h3>
+                            <p>Spinach gravy with soft paneer and rice.</p>
+                            <span class="price">₹150</span>
+                            <button class="add-btn" data-name="Palak Paneer with Rice" data-price="150">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="veg" data-meal="dinner">
+                        <div class="order-img">
+                            <img src="Graphics/Veg Biryani with Raita.jpg" alt="Veg Biryani with Raita">
+                            <span class="badge-veg">Veg</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Veg Biryani with Raita</h3>
+                            <p>Fragrant rice layered with vegetables.</p>
+                            <span class="price">₹150</span>
+                            <button class="add-btn" data-name="Veg Biryani with Raita" data-price="150">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="veg" data-meal="dinner">
+                        <div class="order-img">
+                            <img src="Graphics/Bhindi Masala with Chapati.jpg" alt="Bhindi Masala with Chapati">
+                            <span class="badge-veg">Veg</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Bhindi Masala with Chapati</h3>
+                            <p>Bharwa Bhindi curry served with soft Chapati.</p>
+                            <span class="price">₹150</span>
+                            <button class="add-btn" data-name="Bhindi Masala with Chapati" data-price="150">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="veg" data-meal="dinner">
+                        <div class="order-img">
+                            <img src="Graphics/Stuffed Paratha with Curd.jpg" alt="Stuffed Paratha with Curd">
+                            <span class="badge-veg">Veg</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Stuffed Paratha with Curd</h3>
+                            <p>Flavored paratha served with chilled curd.</p>
+                            <span class="price">₹150</span>
+                            <button class="add-btn" data-name="Stuffed Paratha with Curd" data-price="150">Add to Order</button>
+                        </div>
+                     </div>
+                    <div class="order-item" data-type="nonveg" data-meal="dinner">
+                        <div class="order-img">
+                            <img src="Graphics/Fish Curry with Steamed Rice.jpg" alt="Fish Curry with Steamed Rice">
+                            <span class="badge-nonveg">Non-Veg</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Fish Curry with Steamed Rice</h3>
+                            <p>Tangy Fish curry with plain boiled rice.</p>
+                            <span class="price">₹250</span>
+                            <button class="add-btn" data-name="Fish Curry with Steamed Rice" data-price="250">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="nonveg" data-meal="dinner">
+                        <div class="order-img">
+                            <img src="Graphics/Chicken Tikka Masala with Butter Naan.jpg" alt="Chicken Tikka Masala with Butter Naan">
+                            <span class="badge-nonveg">Non-Veg</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Chicken Tikka Masala with Butter Naan</h3>
+                            <p>Smoky Chicken curry with buttery Naan.</p>
+                            <span class="price">₹250</span>
+                            <button class="add-btn" data-name="Chicken Tikka Masala with Butter Naan" data-price="250">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="nonveg" data-meal="dinner">
+                        <div class="order-img">
+                            <img src="Graphics/Mutton Rogan Josh with Rice.JPG" alt="Mutton Rogan Josh with Rice">
+                            <span class="badge-nonveg">Non-Veg</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Mutton Rogan Josh with Rice</h3>
+                            <p>Kashmiri-style mutton curry with rice.</p>
+                            <span class="price">₹250</span>
+                            <button class="add-btn" data-name="Mutton Rogan Josh with Rice" data-price="250">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="nonveg" data-meal="dinner">
+                        <div class="order-img">
+                            <img src="Graphics/Egg Biryani.jpg" alt="Egg Biryani">
+                            <span class="badge-nonveg">Non-Veg</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Egg Biryani</h3>
+                            <p>Spiced rice layered with eggs and masala.</p>
+                            <span class="price">₹250</span>
+                            <button class="add-btn" data-name="Egg Biryani" data-price="250">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="vegan" data-meal="dinner">
+                        <div class="order-img">
+                            <img src="Graphics/Vegetable Soup with Bread.jpg" alt="Vegetable Soup with Bread">
+                            <span class="badge-vegan">Vegan</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Vegetable Soup with Bread</h3>
+                            <p>Light veggie broth with toasted bread.</p>
+                            <span class="price">₹200</span>
+                            <button class="add-btn" data-name="Vegetable Soup with Bread" data-price="200">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="vegan" data-meal="dinner">
+                        <div class="order-img">
+                            <img src="Graphics/Tofu Curry with Rice.jpg" alt="Tofu Curry with Rice">
+                            <span class="badge-vegan">Vegan</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Tofu Curry with Rice</h3>
+                            <p>Spicy Tofu curry paired with boiled Rice.</p>
+                            <span class="price">₹200</span>
+                            <button class="add-btn" data-name="Tofu Curry with Rice" data-price="200">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="vegan" data-meal="dinner">
+                        <div class="order-img">
+                            <img src="Graphics/Vegan Dal Fry with Jeera Rice.jpg" alt="Vegan Dal Fry with Jeera Rice">
+                            <span class="badge-vegan">Vegan</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Vegan Dal Fry with Jeera Rice</h3>
+                            <p>Yellow Dal with cumin-flavored boiled Rice.</p>
+                            <span class="price">₹200</span>
+                            <button class="add-btn" data-name="Vegan Dal Fry with Jeera Rice" data-price="200">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="vegan" data-meal="dinner">
+                        <div class="order-img">
+                            <img src="Graphics/Veggie Stir Fry with Noodles.jpg" alt="Veggie Stir Fry with Noodles">
+                            <span class="badge-vegan">Vegan</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Veggie Stir Fry with Noodles</h3>
+                            <p>Crunchy veggies tossed with noodles.</p>
+                            <span class="price">₹200</span>
+                            <button class="add-btn" data-name="Veggie Stir Fry with Noodles" data-price="200">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="special" data-meal="dinner">
+                        <div class="order-img">
+                            <img src="Graphics/Deluxe Dinner Thali (Paneer Curry + Dal Makhani + Rice + Paratha + Dessert).jpg" alt="Deluxe Dinner Thali">
+                            <span class="badge-special">Special</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Deluxe Dinner Thali</h3>
+                            <p>A plate filled with paneer curry, dal makhani, rice, naan, and dessert.</p>
+                            <span class="price">₹300</span>
+                            <button class="add-btn" data-name="Deluxe Dinner Thali" data-price="300">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="special" data-meal="dinner">
+                        <div class="order-img">
+                            <img src="Graphics/Royal Chicken Thali (Chicken Curry + Egg Curry + Rice + Chapati + Salad).jpg" alt="Royal Chicken Thali">
+                            <span class="badge-special">Special</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Royal Chicken Thali</h3>
+                            <p>A plate filled with chicken curry, egg curry, rice, chapati, and salad.</p>
+                            <span class="price">₹300</span>
+                            <button class="add-btn" data-name="Royal Chicken Thali" data-price="300">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="special" data-meal="dinner">
+                        <div class="order-img">
+                            <img src="Graphics/South Indian.jpg" alt="South Indian Platter">
+                            <span class="badge-special">Special</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>South Indian Platter</h3>
+                            <p>A plate filled with Dosa, Idli, Wada, Sambhar and Chutney.</p>
+                            <span class="price">₹300</span>
+                            <button class="add-btn" data-name="South Indian Platter" data-price="300">Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="order-item" data-type="special" data-meal="dinner">
+                        <div class="order-img">
+                            <img src="Graphics/Chinese Platter.jpg" alt="Chinese Platter">
+                            <span class="badge-special">Special</span>
+                        </div>
+                        <div class="order-content">
+                            <h3>Chinese Platter</h3>
+                            <p>Authentic Chinese platter with noodles, manchurian, and fried rice.</p>
+                            <span class="price">₹300</span>
+                            <button class="add-btn" data-name="Chinese Platter" data-price="300">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-sidebar">
+                <div class="cart">
+                    <h3><i class="fas fa-shopping-cart"></i>Your Cart</h3>
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Your Cart is empty</p>
+                </div>
+                <div class="detail-form">
+                    <h3>Enter Your Details</h3>
+                    <form>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" placeholder="Enter your address">
+                        <label for="delivery">Delivery Time</label>
+                        <div id="delivery" class="carousel">
+                            <input type="radio" id="afternoon12" name="delivery" value="afternoon12">
+                            <label for="afternoon12">Afternoon 12 pm</label>
+                            <input type="radio" id="afternoon1" name="delivery" value="afternoon1">
+                            <label for="afternoon1">Afternoon 1 pm</label>
+                            <input type="radio" id="night8" name="delivery" value="night8">
+                            <label for="night8">Night 8 pm</label>
+                            <input type="radio" id="night9" name="delivery" value="night9">
+                            <label for="night9">Night 9 pm</label>
+                        </div>
+                        <button type="submit" id="order-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="detail-section">
+        <div class="detail-container">
+            <div class="detail-brand">
+                <h2>My Online Dabba</h2>
+                <h3>Home Cooked & Fresh</h3>
+                <p>Delivering authentic, home-cooked meals in traditional tiffin boxes. Fresh ingredients, traditional recipes, and the warmth of home-cooked food.</p>
+                <div class="social-icons">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="detail-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html">Order Now</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="detail-contact">
+                <h3>Contact</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-envelope"></i> hello@myonlinedabba.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, City</li>
+                    <li><i class="fas fa-clock"></i> Mon-Sun: 10AM-9PM</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div id="copyright">
+            Copyright &copy; www.MyOnlineDabba.com. All Rights Reserved. Privacy Policy | Terms of Service
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
