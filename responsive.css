@@ -302,6 +302,10 @@
   text-align: left;
 }
 
+.features-list p {
+  text-align: left;
+}
+
 #values {
   padding: 40px 15px;
 }
@@ -340,6 +344,38 @@
 
 #mission-section {
   padding: 20px 15px;
+}
+
+
+/*Contact Section*/
+#container {
+  grid-template-columns: 1fr;
+  padding: 1rem;
+}
+
+#contact-form,
+.contact-info .info-box,
+.contact-social {
+  padding: 1rem;
+  text-align: center;
+}
+
+.contact-info h4,
+.contact-info p {
+  text-align: center;
+}
+
+.contact-social ul {
+  justify-content: center;
+}
+
+.form-group label {
+  width: 100%;
+  text-align: left;
+}
+
+#cta-section {
+  margin: 30px 15px;
 }
 }
 
