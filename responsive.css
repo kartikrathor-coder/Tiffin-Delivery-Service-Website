@@ -278,6 +278,10 @@
   padding: 40px 15px;
 }
 
+.about-hero {
+  flex-direction: column;
+}
+
 .about-left {
   padding: 0;
   text-align: center;
@@ -289,7 +293,13 @@
 }
 
 .features-list {
-  align-items: center;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.features-list li {
+  align-items: flex-start;
+  text-align: left;
 }
 
 #values {
