@@ -5,6 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+/*Navbar Functionality*/
+const navbar = document.getElementById('navbar');
+const hamburger = document.querySelector('#hamburger-menu');
+//Adding click event//
+hamburger.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+    console.log("Hamburger clicked");
+});
+
+
+
 //Review Form Submission//
 const reviewForm = document.getElementById("submit-review");
 let btn;

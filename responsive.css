@@ -1,331 +1,342 @@
-@media screen and (max-width: 768px) {
-#navbar {
-    flex-direction: column;
-    justify-content: center;
-}
+@media (max-width: 768px) {
+  #navbar {
+    padding: 10px 20px;
+  }
 
-
-#navbar ul {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-}
-
-#nav-list {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-hamburger {
+  .nav-links,
+  .order-btn {
     display: none;
-    font-size: 24px;
-    cursor: pointer;
-}
+  }
 
-#navbar ul li a{
-    font-size: 1rem;
-    padding: 2px 7px;
-    padding-bottom: 8px;
-}
+  #hamburger-menu {
+    display: block;
+  }
 
+  #navbar.active {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 20px;
+  }
+
+  #navbar.active .nav-links,
+  #navbar.active .order-btn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  #navbar.active .nav-links {
+    gap: 10px;
+  }
+
+  #navbar.active .nav-links a {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+
+/*Hero Section*/
 #home {
-    height: 370px;
-    padding: 3px 68px;
-}
-#home::before {
-    height: 480px;
-}
-#home p {
-    font-size: 13px;
-}
-
-#home {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    flex-direction: column;         /* Stack home-content and home-img vertically */
-    padding: 20px 20px;             /* Adjust padding for smaller screens */
-    height: auto;
-    align-items: flex-start;       /* Align content to the left for better UX */
+  flex-direction: column;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .home-content {
-    max-width: 100%;                /* Use full width */
-    margin-bottom: 20px;            /* Space between text and image */
+  text-align: center;
 }
 
-.home-img {
-    max-width: 100%;                /* Use full width */
-    width: 100%;                   /* Full container width */
-    justify-content: center;
-    margin-top: 10px;
+.home-content h1 {
+  font-size: 28px;
 }
 
-.home-img img {
-    width: 90%;                    /* Make image more visible */
-    height: auto;                  /* Keep aspect ratio on smaller screen */
+.home-content p {
+  font-size: 16px;
 }
 
-#home p {
-    font-size: 14px;               /* Slightly bigger font for readability */
-    padding: 12px 16px;
-    max-width: 100%;
+#home .stats {
+  justify-content: center;
+  gap: 20px;
 }
 
-.home-btn, .menu-btn {
-    font-size: 18px;               /* Slightly smaller buttons for mobile */
-    padding: 8px 14px;
-    width: 48%;                   /* Buttons side by side (almost half width) */
-    margin-top: 10px;
+.home-btn ,
+.menu-btn {
+  display: grid;
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 10px;
 }
 
-/* Optional: Display buttons side by side on small screen */
-.home-content > button {
-    display: inline-block;
-}
 
+/*Services Section*/
 #services {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  padding: 40px 15px;
 }
 
-.review-right {
-    flex-direction: column;
-    align-items: center;
-  }
+#services h1 {
+  font-size: 2rem;
+}
+
+.service-container {
+  gap: 25px;
+}
+
+#services .box {
+  min-width: 100%;
+  padding: 20px;
+}
+
+#services .box img {
+  max-width: 80px;
+}
+
+#services .box p {
+  font-size: 16px;
+}
+
+
+/*Why Choose Section*/
+#why-choose {
+  padding: 40px 15px;
+}
+
+#why-choose h1 {
+  font-size: 2rem;
+}
+
+#why-choose p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.features {
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.feature-item {
+  max-width: 1200px;
+  width: 100%;
+  transform: translateX(0);
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/*How We Works*/
+#working-section {
+  padding: 40px 15px;
+}
+
+#working-section h1 {
+  font-size: 2rem;
+}
+
+#working-section > p {
+  font-size: 1rem;
+}
+
+.steps-container {
+  flex-direction: column;
+  gap: 40px;
+}
+
+.step {
+  min-width: 100%;
+  padding: 40px 20px 20px;
+}
+
+.stap-number {
+  transform: translateX(-50%);
+}
+
+.step h3 {
+  font-size: 1.25rem;
+}
+
+
+/*Review Section*/
+#reviews-section {
+  padding: 40px 15px;
+}
+
+#reviews-section h1 {
+  font-size: 2rem;
+}
+
+#review-right {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 
 .card {
-    width: 90%;
-  }
-
-#contact-box form {
-    width: 80%;
+  width: 100%;
+  height: auto;
+  padding: 15px;
 }
 
-.h-primary {
-    font-size: 26px;
+#submit-review {
+  padding: 20px 10px;
 }
 
-.btn {
-    font-size: 13px;
-    padding: 4px 8px;
+.form-group {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
 }
 
-  .form-group {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .form-group label {
-    width: 100%;
-    margin-bottom: 5px;
+.form-group label {
+  width: 100%;
+  text-align: left;
 }
+
 .form-group input,
 .form-group textarea {
   width: 100%;
 }
 
-.features {
-  grid-template-columns: 1fr;
-}
-            
-#why-choose h1 {
-  font-size: 2.2rem;
-}
-            
-#why-choose > #container > p {
-  font-size: 1.1rem;
-}
-            
-.feature-item {
-  max-width: 100%;
+
+/*Menu Section*/
+#menu-section {
+  padding: 40px 15px;
 }
 
-.steps-container {
-  flex-direction: column;
-  align-items: center;
-}
-    
-.step {
-  width: 100%;
-  max-width: 350px;
-}
-    
-#how-it-works h2 {
-  font-size: 2.2rem;
-}
-    
-#how-it-works > p {
-  font-size: 1.1rem;
+#menu-section h1 {
+  font-size: 2rem;
 }
 
-.footer-container {
-  grid-template-columns: 1fr;
-  gap: 30px;
-}
-    
-.footer-brand, .footer-links, .footer-contact {
-  text-align: center;
-}
-    
-.footer-links h3:after, .footer-contact h3:after {
-  left: 50%;
-  transform: translateX(-50%);
-}
-    
-.social-icons {
-  justify-content: center;
+#menu-section p {
+  font-size: 1rem;
 }
 
 .menu-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
+  grid-template-columns: 1fr;
+}
 
-  .menu-item {
-    padding: 12px;
-  }
+#chefs-special {
+  margin: 30px 15px;
+}
 
-  .menu-item h3 {
-    font-size: 1rem;
-  }
+#chefs-special h2 {
+  font-size: 1.5rem;
+}
 
-  .menu-item p {
-    font-size: 0.9rem;
-  }
+#chefs-special p {
+  font-size: 0.9rem;
+}
 
-  .price {
-    font-size: 0.95rem;
-  }
 
-  .order-btn {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
+/*Order Page*/
+#order-page {
+  padding: 40px 15px;
+}
 
-  .order-container {
-    flex-direction: column;
-  }
-  
-  .order-sidebar {
-    width: 100%;
-    margin-top: 20px;
-  }
+#order-page h1 {
+  font-size: 2rem;
+}
 
+.order-layout {
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.order-grid {
+  grid-template-columns: 1fr;
+}
+
+.order-sidebar {
+  position: static;
+  width: 100%;
+  padding: 15px;
+}
+
+.meal-order-filters,
+.type-order-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.order-fliter {
+  padding: 8px 12px;
+  margin: 3px;
+  font-size: 12px;
+}
+
+
+/*About Page*/
 #about-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-left {
-    padding-left: 0;
-  }
-
-  .about-right img {
-    width: 100%;
-    max-width: 320px;
-    margin-top: 20px;
-  }
-
-  #our-story {
-    padding: 60px 1.5rem;
-  }
-
-  #our-story h2 {
-    font-size: 2rem;
-  }
-
-  #our-story p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  .features-list {
-    align-items: center;
-  }
-
-  .value-card {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contact-content .container {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .contact-info,
-  #contact-box {
-    max-width: 100%;
-  }
-
-  #team-section h1 {
-    font-size: 2rem;
-  }
-
-  .team-cards {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  .team-card img {
-    max-width: 180px;
-    height: 180px;
-  }
-
+  flex-direction: column;
+  padding: 40px 15px;
 }
 
-/* For mobiles */
-@media (max-width: 576px) {
-  .value-card {
-    grid-template-columns: 1fr;
-  }
+.about-left {
+  padding: 0;
+  text-align: center;
+}
 
-  #values h1 {
-    font-size: 2rem;
-  }
+.about-left p {
+  font-size: 1rem;
+  text-align: center;
+}
 
-  #values p {
-    font-size: 1rem;
-  }
+.features-list {
+  align-items: center;
+}
 
-  .contact-content .container {
-    flex-direction: column;
-    gap: 30px;
-  }
+#values {
+  padding: 40px 15px;
+}
 
-  .contact-info,
-  #contact-box {
-    max-width: 100%;
-  }
+.value-card {
+  grid-template-columns: 1fr;
+  gap: 20px;
+  transform: translateX(0);
+}
 
+.vcard {
+  transform: translateX(0);
+}
+
+.vcard:hover {
+  transform: translateY(-5px);
+}
+
+#impact-section {
+  padding: 40px 15px;
+}
+
+.impact-numbers {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+#team-section {
+  padding: 40px 15px;
+}
+
+.team-cards {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+#mission-section {
+  padding: 20px 15px;
+}
 }
 
 
-@media (max-width: 480px) {
+
+@media (max-width: 1024px) {
   .menu-grid {
-    grid-template-columns: 1fr; /* single column */
-  }
-
-  .menu-item {
-    padding: 10px;
-  }
-}
-
-@media (max-width: 576px) {
-  .impact-numbers {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  #impact-section h1 {
-    font-size: 2rem;
-  }
-
-  .impact-numbers .number {
-    font-size: 2rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 }

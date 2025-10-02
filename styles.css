@@ -14,6 +14,7 @@ body {
 }
 
 
+
 /*Navbar*/
 #navbar {
   display: flex;
@@ -90,9 +91,21 @@ body {
   cursor: pointer;
   transition: background 0.3s;
 }
+
 .order-btn:hover {
   background: linear-gradient(to right, #ff8800, #ff6600);
 }
+
+#hamburger-menu {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  color: #333;
+}
+
 
 
 /*Home Section*/
@@ -1239,7 +1252,6 @@ textarea {
   font-size: 1.2rem;
   color: #ff6600;
 }
-
 /* Cart Styles */
 .cart-list {
     margin: 15px 0;
