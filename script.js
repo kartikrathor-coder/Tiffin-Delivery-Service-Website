@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*Navbar Functionality*/
 const navbar = document.getElementById('navbar');
-const hamburger = document.querySelector('#hamburger-menu');
+const hamburger = document.getElementById('hamburger-menu');
 //Adding click event//
 hamburger.addEventListener('click', () => {
     navbar.classList.toggle('active');

@@ -8,10 +8,6 @@
     display: none;
   }
 
-  #hamburger-menu {
-    display: block;
-  }
-
   #navbar.active {
     flex-direction: column;
     align-items: flex-start;
@@ -36,6 +32,9 @@
     border-bottom: 1px solid #ddd;
   }
 
+  #hamburger-menu {
+    display: flex;
+  }
 
 /*Hero Section*/
 #home {
